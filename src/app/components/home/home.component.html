@@ -1,0 +1,17 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">Muvee</h1>
+    <p class="lead">¡La información más completa acerca de tus películas favoritas!</p>
+  </div>
+</div>
+
+<div class="containter-fluid">
+
+  <div class="container">
+    <app-galeria [peliculas]="theaters | slice:0:6" titulo="Películas en cines"></app-galeria>
+    <app-galeria [peliculas]="populars | slice:0:6" titulo="Películas populares"></app-galeria>
+    <app-galeria [peliculas]="kids | slice:0:6" titulo=" Películas para niños"></app-galeria>
+  </div>
+
+</div>

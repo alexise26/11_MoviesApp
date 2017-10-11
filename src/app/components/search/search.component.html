@@ -1,0 +1,20 @@
+<div class="container main-container">
+<h3>Resultados relacionados a <small>'{{termino}}'</small>...</h3>
+<hr>
+<div class="row text-center">
+    <div class="card-columns animated fadeIn fast"  >
+      <div class="card" *ngFor="let movie of movies" style="width: 20rem;">
+        <img class="card-img-top puntero" [routerLink]="['/movie', movie.id,'search/' + termino ]" [src]="movie.poster_path | searchImg" alt="{{movie.title}}" style="height:400px;">
+        <div class="card-body">
+          <p class="card-title"><b>{{movie.title}} </b></p>
+          <!-- <p class="card-text">{{theater.overview}}</p> -->
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span class="text-left">{{movie.vote_average}}/10 <i class="fa fa-star" aria-hidden="true"></i></span>
+              <span class="text-right">{{movie.release_date | date:'dd-MM-yyyy'}} <i class="fa fa-calendar" aria-hidden="true"></i></span>
+            </li>
+        </ul>
+      </div>
+    </div>
+</div>
