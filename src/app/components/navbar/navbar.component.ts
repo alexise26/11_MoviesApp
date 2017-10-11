@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   }
 
   search(termino:string){
-    this._router.navigate(['search',termino]);
+    this._router.navigate(['/search',termino]);
   }
 
 }
