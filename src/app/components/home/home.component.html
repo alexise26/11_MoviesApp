@@ -1,7 +1,7 @@
 
 <div class="jumbotron jumbotron-fluid" style="background-color:#191919">
   <div class="container">
-    <img src="assets/img/logo_b.png" alt="">
+    <img src="assets/img/logo_b.png" class="img-fluid" alt="">
     <p class="lead" style="color:white">¡La información más completa acerca de tus películas favoritas!</p>
   </div>
 </div>
@@ -9,9 +9,9 @@
 <div class="containter-fluid">
 
   <div class="container">
-    <app-galeria [peliculas]="theaters | slice:0:6" titulo="Películas en cines"></app-galeria>
-    <app-galeria [peliculas]="populars | slice:0:6" titulo="Películas populares"></app-galeria>
-    <app-galeria [peliculas]="kids | slice:0:6" titulo=" Películas para niños"></app-galeria>
+    <app-galeria [peliculas]="theaters | slice:0:12" titulo="Películas en cines"></app-galeria>
+    <app-galeria [peliculas]="populars | slice:0:12" titulo="Películas populares"></app-galeria>
+    <app-galeria [peliculas]="kids | slice:0:12" titulo=" Películas para niños"></app-galeria>
   </div>
 
 </div>
