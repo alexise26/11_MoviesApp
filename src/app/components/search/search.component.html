@@ -18,3 +18,9 @@
       </div>
     </div>
 </div>
+<div class="alert alert-info" role="alert" *ngIf="movies?.length==0">
+  No se encontraron resultados...
+</div>
+<div class="alert alert-info" role="alert" *ngIf="cargando==true">
+  Buscando...
+</div>

@@ -9,21 +9,28 @@ import {Router} from '@angular/router';
   styles: []
 })
 export class SearchComponent implements OnInit {
-  private movies:string[];
-  private termino:string;
+   movies:string[]=null;
+   cargando:boolean=true;
+   termino:string;
 
   constructor(public _ms:MoviesService, private activatedRoute:ActivatedRoute,private _router:Router) {
-    this.activatedRoute.params
-          .subscribe(params=>{
-            this.termino = params['termino'];
-            this.getMovies(this.termino);
-          })
+
+    setTimeout(()=>{
+      this.activatedRoute.params
+            .subscribe(params=>{
+              this.termino = params['termino'];
+              this.getMovies(this.termino);
+              this.cargando=false;
+            })
+    },1000);
+
   }
 
   getMovies(texto:string){
     this._ms.buscarPelicula(texto)
         .subscribe(data=>{
           this.movies= data.results;
+          console.log(this.movies)
         })
   }
 
